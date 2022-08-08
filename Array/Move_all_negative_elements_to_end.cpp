@@ -2,25 +2,22 @@
 using namespace std;
 int main()
 {
-    int n = 5;
     int temp;
-
-    int arr[n] = {55, 4, 633, 2, 1};
-
-    for (int i = 0; i < n; i++)
+    int arr[8] = {1, -1, 3, 2, -7, -5, 11, 6};
+    for (int i = 0; i < 8; i++)
     {
-        for (int j = i; j < n; j++)
+        for (int j = i; j < 8; j++)
         {
-            if (arr[i] < arr[j])
+            if (arr[i] < 0)
             {
                 temp = arr[i];
                 arr[i] = arr[j];
-                arr[j] = arr[i];
+                arr[j] = temp;
             }
         }
     }
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 8; i++)
     {
         cout << arr[i] << " ";
     }
