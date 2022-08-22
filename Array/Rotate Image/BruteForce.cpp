@@ -1,7 +1,4 @@
-
-
 #include <bits/stdc++.h>
-
 using namespace std;
 vector<vector<int>> rotate(vector<vector<int>> &matrix)
 {
