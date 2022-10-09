@@ -22,7 +22,7 @@ void printlist(Node *head)
 }
 Node *Segregate(Node *head)
 {
-    Node *temp; // We can not copy other Node data into Null Node ---> It will give us sementation fault
+    // Node *temp; ---> // We can not copy other Node data into Null Node ---> It will give us wrong output
     Node *curr = head;
     Node *p = head;
     Node *q = head;
