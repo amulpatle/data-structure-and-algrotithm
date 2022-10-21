@@ -28,6 +28,7 @@ void RemoveLoop(Node *head)
     {
         return;
     }
+    slow_p = head;
     while (slow_p->next != fast_p->next)
     {
         slow_p = slow_p->next;
