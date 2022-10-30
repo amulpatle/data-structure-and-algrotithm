@@ -30,7 +30,7 @@ bool isPalindrome(Node *head)
     {
         slow = slow->next;
         fast = fast->next->next;
-    }
+    } // slow pointer reach to  mid of list
     Node *rev = reverseList(slow->next);
     Node *curr = head;
     while (rev != NULL)
