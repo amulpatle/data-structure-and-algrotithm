@@ -32,7 +32,7 @@ struct MinHeap
     {
         if (size == 0)
             return INT_MAX;
-        if (size == 1)
+        a if (size == 1)
         {
             size--;
             return arr[size];
