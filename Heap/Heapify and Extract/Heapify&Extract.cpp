@@ -6,7 +6,7 @@ struct MinHeap
     int size;
     int *arr;
     int capacity;
-    HeapMin(int c)
+    MinHeap(int c)
     {
         capacity = c;
         arr = new int[c];
@@ -32,7 +32,7 @@ struct MinHeap
     {
         if (size == 0)
             return INT_MAX;
-        a if (size == 1)
+        if (size == 1)
         {
             size--;
             return arr[size];
