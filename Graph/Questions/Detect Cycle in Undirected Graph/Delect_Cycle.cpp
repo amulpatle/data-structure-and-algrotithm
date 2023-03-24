@@ -9,13 +9,14 @@ bool BFS(int src, vector<int> adj[], int V, bool visited[], int parent[])
     while (q.empty() == false)
     {
         int u = q.front();
+        q.pop();
         for (auto v : adj[u])
         {
-            if (visited[v] && parent[v] != u)
+            if (visited[v] && parent[u] != v)
                 return true;
-            if (visited[u] == false)
+            if (visited[v] == false)
             {
-                visited[u] = true;
+                visited[v] = true;
                 parent[v] = u;
                 q.push(v);
             }
@@ -36,7 +37,7 @@ bool isCycle(vector<int> adj[], int V)
 
     for (int i = 0; i < V; i++)
     {
-        if (!visited && BFS(i, adj, V, visited, parent))
+        if (!visited[i] && BFS(i, adj, V, visited, parent))
             return true;
         return false;
     }
@@ -58,9 +59,9 @@ int main()
     addEdge(adj, 2, 3);
 
     if (isCycle(adj, V))
-        cout << "Cycle found";
+        cout << "Cycle found" << endl;
     else
-        cout << "No cycle found";
+        cout << "No cycle found" << endl;
 
     return 0;
 }
