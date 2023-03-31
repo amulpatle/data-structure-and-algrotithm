@@ -4,6 +4,6 @@ int main()
 {
     int strick;
     strick = 5;
-    cout << strick;
+    cout << strick << endl;
     return 0;
 }
